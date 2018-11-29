@@ -1,5 +1,5 @@
 ## 會員資料member
-~~~
+~~~javascript
 member/add
 input
 {Id,displayName,password,appellation}
