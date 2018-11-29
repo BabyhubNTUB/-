@@ -1,5 +1,5 @@
 ## 會員資料member
-~~~
+~~~javascript
 名稱：member/add
 方法：post
 input
