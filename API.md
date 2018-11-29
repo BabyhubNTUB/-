@@ -1,4 +1,4 @@
-##會員資料member
+## 會員資料member
 ~~~
 名稱：member/add
 方法：post
@@ -36,7 +36,7 @@ return
 {id,displayName,appellation,lineId}|{false}
 ~~~
 
-##寶寶資料baby
+## 寶寶資料baby
 ~~~
 名稱：baby/add
 方法：post
@@ -68,7 +68,7 @@ Return
 ~~~
 
 
-##成長紀錄growingRecord
+## 成長紀錄growingRecord
 ~~~
 名稱：growingRecord/add
 方法：post
