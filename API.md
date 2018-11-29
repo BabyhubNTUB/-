@@ -1,5 +1,5 @@
 ## 會員資料member
-~~~javascript
+~~~
 名稱：member/add
 方法：post
 input
@@ -23,8 +23,7 @@ ture|false
 input
 {displayName,password}
 return
-{result:’success’}
-{result:’fail’}
+ture|false
 ~~~
 
 ~~~
@@ -33,7 +32,7 @@ return
 input
 {id}
 return
-{id,displayName,appellation,lineId}|{false}
+{id,displayName,appellation,lineId}|false
 ~~~
 
 ## 寶寶資料baby
@@ -43,8 +42,7 @@ return
 input
 {babyNo,id,name,birthday,gender}
 return
-{result:’success’}
-{result:’fail’}
+ture|false
 ~~~
 
 ~~~
@@ -53,8 +51,7 @@ return
 input
 {name,password}
 return
-{result:’success’}
-{result:’fail’}
+ture|false
 ~~~
 
 ~~~
@@ -63,8 +60,7 @@ return
 input
 {name}
 Return
-{babyNo,id,name,birthday,gender}
-{result:’fail’}
+{babyNo,id,name,birthday,gender}|false
 ~~~
 
 
@@ -75,8 +71,7 @@ Return
 input
 {serNo,babyNo,recordDateTime,height,weight,drinkMilk}
 return
-{result:’success’}
-{result:’fail’}
+ture|false
 ~~~
 
 ~~~
@@ -85,8 +80,7 @@ return
 input
 {babyNo,recordDateTime}
 return
-{result:’success’}
-{result:’fail’}
+ture|false
 ~~~
 
 ~~~
@@ -95,8 +89,7 @@ return
 input
 {height,weight,drinkMilk}
 return
-{result:’success’}
-{result:’fail’}
+ture|false
 ~~~
 
 ~~~
@@ -105,7 +98,7 @@ return
 input
 {babyNo,recordDateTime}
 return
-{serNo,babyNo,recordDateTime,height,weight,drinkMilk}
+{serNo,babyNo,recordDateTime,height,weight,drinkMilk}|false
 ~~~
 
 
