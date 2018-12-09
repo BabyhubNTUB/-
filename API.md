@@ -102,10 +102,68 @@ return
 ~~~
 
 
+## 討論區文章forum
+~~~
+名稱：forum/add
+方法：post
+input
+{forumNo,typeNo,id,forumName,forumDateTime,content}
+return
+ture|false
+~~~
+
+~~~
+名稱：forum/del
+方法：delete
+input
+{forumNo}
+return
+ture|false
+~~~
+
+~~~
+名稱：forum/update
+方法：put
+input
+{forumName}|{content}
+return
+ture|false
+~~~
+
+~~~
+名稱：forum/query
+方法：get
+input
+{forumNo}|{forumName}
+return
+{forumNo,typeNo,id,forumName,forumDateTime,content}|false
+~~~
 
 
+## 討論區文章留言forumComment
+~~~
+名稱：forumComment/add
+方法：post
+input
+{serNo,forumNo,id,comDateTime,content}
+return
+ture|false
+~~~
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+~~~
+名稱：forumComment/del
+方法：delete
+input
+{serNo}
+return
+ture|false
+~~~
+
+~~~
+名稱：forumComment/update
+方法：put
+input
+{content}
+return
+ture|false
+~~~
