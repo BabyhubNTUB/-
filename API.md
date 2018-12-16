@@ -1,5 +1,5 @@
 ## 會員資料member
-~~~<
+~~~
 描述：用於登入
 路徑：member/add
 HTTP方法：POST
