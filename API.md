@@ -53,7 +53,7 @@ reguest 請求：
     password:"密碼",
     [newPassword:"新密碼",
     newDisplayName:"新名稱",
-photo: "大頭貼"]
+    photo: "大頭貼"]
   }
 response 回傳(成功)：
   {
