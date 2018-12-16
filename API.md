@@ -63,7 +63,7 @@ response 回傳(失敗)：
   }
 ~~~
 
-~~~
+~~~java
 描述:查詢會員
 名稱：member/query
 方法：GET
