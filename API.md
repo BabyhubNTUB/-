@@ -9,15 +9,22 @@ reguest 請求：
     "password":"密碼",
     "code":"驗證碼"
   }
-response 回傳：
+response 回傳(成功)：
   {
-    ture|false
+    "displayname":"會員名稱",
+    "code":"1"
+  }
+===
+response 回傳(失敗)：
+  {
+    "code":"0"
   }
 ~~~
 
 ~~~
-名稱：member/del
-方法：delete
+描述：用於刪除帳號
+路徑：member/delete/id
+HTTP方法：DELETE
 input
 {id,password}
 return
