@@ -1,7 +1,8 @@
 ## 會員資料member
-~~~
-名稱：member/add
-HTTP方法：post
+~~~<
+描述：用於登入
+路徑：member/add
+HTTP方法：POST
 reguest 請求：
   {
     "id":"帳號/信箱",
