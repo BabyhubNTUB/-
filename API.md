@@ -52,7 +52,8 @@ reguest 請求：
     id:"帳號(信箱)",
     password:"密碼",
     [newPassword:"新密碼",
-    newDisplayName:"新名稱"]
+    newDisplayName:"新名稱",
+photo: "大頭貼"]
   }
 response 回傳(成功)：
   {
@@ -79,6 +80,7 @@ response 回傳(成功)：
     displayName:"會員名稱",
     appellation:"稱謂",
     lineId:"LINEID",
+photo: "大頭貼"
     code:"1"
   }
 ===
