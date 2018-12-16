@@ -21,23 +21,46 @@ response 回傳(失敗)：
   }
 ~~~
 
-~~~
+~~~java
 描述：用於刪除帳號
-路徑：member/delete/id
+路徑：member/delete
 HTTP方法：DELETE
-input
-{id,password}
-return
-ture|false
+reguest 請求：
+  {
+    "id":"帳號/信箱",
+    "password":"密碼",
+  }
+response 回傳(成功)：
+  {
+    "code":"1"
+  }
+===
+response 回傳(失敗)：
+  {
+    "code":"0"
+  }
 ~~~
 
 ~~~
+描述：更新會員資料
 名稱：member/update
-方法：put
-input
-{displayName,password}
-return
-ture|false
+方法：PUT
+reguest 請求：
+  {
+    "id":"帳號/信箱",
+    "password":"密碼",
+    ["newPassword":"新密碼",
+    "newDisplayName":"新名稱"]
+  }
+response 回傳(成功)：
+  {
+    "code":"1"
+  }
+===
+response 回傳(失敗)：
+  {
+    "code":"0"
+  }
 ~~~
 
 ~~~
