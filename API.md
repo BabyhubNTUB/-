@@ -7,7 +7,7 @@ reguest 請求：
   {
     "id":"帳號/信箱",
     "password":"密碼",
-    "code":"驗證碼
+    "code":"驗證碼"
   }
 response 回傳：
   {
