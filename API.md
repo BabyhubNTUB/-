@@ -1,7 +1,7 @@
 ## 會員資料member
 ~~~java
 描述：用於登入
-路徑：member/add
+路徑：/login
 HTTP方法：POST
 reguest 請求：
   {
