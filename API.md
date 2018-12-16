@@ -41,7 +41,7 @@ response 回傳(失敗)：
   }
 ~~~
 
-~~~
+~~~java
 描述：更新會員資料
 名稱：member/update
 方法：PUT
@@ -64,12 +64,25 @@ response 回傳(失敗)：
 ~~~
 
 ~~~
+描述:查詢會員
 名稱：member/query
-方法：get
-input
-{id}
-return
-{id,displayName,appellation,lineId}|false
+方法：GET
+reguest 請求：
+  {
+    "id":"帳號/信箱"
+  }
+response 回傳(成功)：
+  {
+    "id":"帳號/信箱",
+    "password":"密碼",
+    "displayName":"會員名稱",
+    "code":"1"
+  }
+===
+response 回傳(失敗)：
+  {
+    "code":"0"
+  }
 ~~~
 
 ## 寶寶資料baby
