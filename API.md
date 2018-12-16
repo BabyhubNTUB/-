@@ -1,11 +1,17 @@
 ## 會員資料member
 ~~~
 名稱：member/add
-方法：post
-input
-{Id,displayName,password,appellation}
-return
-ture|false
+HTTP方法：post
+reguest 請求：
+  {
+    "id":"帳號/信箱",
+    "password":"密碼",
+    "code":"驗證碼
+  }
+response 回傳：
+  {
+    ture|false
+  }
 ~~~
 
 ~~~
