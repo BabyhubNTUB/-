@@ -1,88 +1,38 @@
 ## 會員資料member
-~~~java
-描述：用於登入
-路徑：/login
-HTTP方法：POST
-reguest 請求：
-  {
-    "id":"帳號/信箱",
-    "password":"密碼",
-    "code":"驗證碼"
-  }
-response 回傳(成功)：
-  {
-    "displayname":"會員名稱",
-    "code":"1"
-  }
-===
-response 回傳(失敗)：
-  {
-    "code":"0"
-  }
+~~~
+名稱：member/add
+方法：post
+input
+{Id,displayName,password,appellation}
+return
+ture|false
 ~~~
 
-~~~java
-描述：用於刪除帳號
-路徑：/member/delete
-HTTP方法：DELETE
-reguest 請求：
-  {
-    "id":"帳號/信箱",
-    "password":"密碼",
-  }
-response 回傳(成功)：
-  {
-    "code":"1"
-  }
-===
-response 回傳(失敗)：
-  {
-    "code":"0"
-  }
+~~~
+名稱：member/del
+方法：delete
+input
+{id,password}
+return
+ture|false
 ~~~
 
-~~~java
-描述：更新會員資料
-名稱：/member/update
-方法：PUT
-reguest 請求：
-  {
-    "id":"帳號/信箱",
-    "password":"密碼",
-    ["newPassword":"新密碼",
-    "newDisplayName":"新名稱"]
-  }
-response 回傳(成功)：
-  {
-    "code":"1"
-  }
-===
-response 回傳(失敗)：
-  {
-    "code":"0"
-  }
+~~~
+名稱：member/update
+方法：put
+input
+{displayName,password}
+return
+ture|false
 ~~~
 
-~~~java
-描述:查詢會員
-名稱：/member/query
-方法：GET
-reguest 請求：
-  {
-    "id":"帳號/信箱"
-  }
-response 回傳(成功)：
-  {
-    "id":"帳號/信箱",
-    "password":"密碼",
-    "displayName":"會員名稱",
-    "code":"1"
-  }
-===
-response 回傳(失敗)：
-  {
-    "code":"0"
-  }
+~~~
+名稱：member/query
+方法：get
+input
+{id}
+return
+{id,displayName,appellation,lineId}|false
 ~~~
 
 ## 寶寶資料baby
