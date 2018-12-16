@@ -24,7 +24,7 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：用於刪除帳號
+描述：刪除會員資料
 路徑：/member/delete
 HTTP方法：DELETE
 reguest 請求：
@@ -49,7 +49,7 @@ response 回傳(失敗)：
 方法：PUT
 reguest 請求：
   {
-    id:"帳號/信箱",
+    id:"帳號(信箱)",
     password:"密碼",
     [newPassword:"新密碼",
     newDisplayName:"新名稱"]
@@ -66,7 +66,7 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述:查詢會員
+描述:查詢會員資料
 名稱：/member/query
 方法：GET
 reguest 請求：
