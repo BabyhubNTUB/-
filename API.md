@@ -2,7 +2,7 @@
 ~~~java
 描述：新增會員資料
 路徑：/member/add
-HTTP方法：POST
+方法：POST
 reguest 請求：
   {
     id:"帳號(信箱)",
@@ -26,7 +26,7 @@ response 回傳(失敗)：
 ~~~java
 描述：刪除會員資料
 路徑：/member/delete
-HTTP方法：DELETE
+方法：DELETE
 reguest 請求：
   {
     id:"帳號(信箱)",
