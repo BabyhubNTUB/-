@@ -50,10 +50,11 @@ response 回傳(失敗)：
 reguest 請求：
   {
     id:"帳號(信箱)",
+    displayName:"名稱/姓名",
     password:"密碼",
     [newPassword:"新密碼",
-    newDisplayName:"新名稱",
-    photo: "大頭貼"]
+    newDisplayName:"新名稱"],
+    photo: "大頭貼"
   }
 response 回傳(成功)：
   {
