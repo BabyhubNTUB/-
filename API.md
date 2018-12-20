@@ -3,23 +3,23 @@
 描述：新增會員資料
 路徑：/member/add
 方法：POST
-reguest 請求：
+request 請求：
   {
     id:"帳號(信箱)",
     displayName:"名稱/姓名",
     password:"密碼",
-    appellation:"稱謂",
-    code:"驗證碼"
+    appellation:"稱謂"
   }
 ===
 response 回傳(成功)：
   {
-    code:"1"
+    code:"0"
   }
 ===
 response 回傳(失敗)：
   {
-    code:"0"
+    code:"-1"
+    message:""
   }
 ~~~
 
@@ -27,19 +27,19 @@ response 回傳(失敗)：
 描述：刪除會員資料
 路徑：/member/delete
 方法：DELETE
-reguest 請求：
+request 請求：
   {
     id:"帳號(信箱)",
     password:"密碼",
   }
 response 回傳(成功)：
   {
-    code:"1"
+    code:"0"
   }
 ===
 response 回傳(失敗)：
   {
-    code:"0"
+    code:"-1"
   }
 ~~~
 
@@ -47,7 +47,7 @@ response 回傳(失敗)：
 描述：更新會員資料
 名稱：/member/update
 方法：PUT
-reguest 請求：
+request 請求：
   {
     id:"帳號(信箱)",
     displayName:"名稱/姓名",
@@ -58,12 +58,12 @@ reguest 請求：
   }
 response 回傳(成功)：
   {
-    code:"1"
+    code:"0"
   }
 ===
 response 回傳(失敗)：
   {
-    code:"0"
+    code:"-1"
   }
 ~~~
 
@@ -71,7 +71,7 @@ response 回傳(失敗)：
 描述:查詢會員資料
 名稱：/member/query
 方法：GET
-reguest 請求：
+request 請求：
   {
     id:"帳號(信箱)"
   }
@@ -81,13 +81,13 @@ response 回傳(成功)：
     displayName:"會員名稱",
     appellation:"稱謂",
     lineId:"LINEID",
-photo: "大頭貼"
-    code:"1"
+    photo: "大頭貼"
+    code:"0"
   }
 ===
 response 回傳(失敗)：
   {
-    code:"0"
+    
   }
 ~~~
 
