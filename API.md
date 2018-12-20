@@ -19,7 +19,7 @@ response 回傳(成功)：
 response 回傳(失敗)：
   {
     code:"-1"
-    message:""
+    message:"此帳號已存在"
   }
 ~~~
 
@@ -52,8 +52,6 @@ request 請求：
     id:"帳號(信箱)",
     displayName:"名稱/姓名",
     password:"密碼",
-    [newPassword:"新密碼",
-    newDisplayName:"新名稱"],
     photo: "大頭貼"
   }
 response 回傳(成功)：
@@ -64,6 +62,7 @@ response 回傳(成功)：
 response 回傳(失敗)：
   {
     code:"-1"
+    message:"更新失敗"
   }
 ~~~
 
@@ -86,26 +85,11 @@ response 回傳(成功)：
   }
 ===
 response 回傳(失敗)：
-  {
-    
-  }
+  {  }
 ~~~
 
 
-
-
-
-
-
 ======================================
-======================================
-
-
-
-
-
-
-
 
 
 ## 寶寶資料baby
