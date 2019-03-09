@@ -4,8 +4,8 @@
 | [會員資料member](#會員資料member) |
 | [寶寶資料baby](#寶寶資料baby) |
 | [成長紀錄growingRecord](#成長紀錄growingRecord) |
-| [討論區文章留言forum](#討論區文章留言forum) |
-| [討論區文章留言forum](#討論區文章留言forum) |
+| [討論區文章forum](#討論區文章forum) |
+| [討論區文章留言forumComment](#討論區文章留言forumComment) |
 
 ## 會員資料member
 ~~~java
