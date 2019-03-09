@@ -17,7 +17,7 @@
 | [T15 forumType(文章類別)](#T15forumType(文章類別)) |
 | [T16 hospital(醫院)](#T16hospital(醫院)) |
 
-## T01 member（會員資料）
+## T01member（會員資料）
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | id | 會員帳號 | P |  | char | 50 | mail |
