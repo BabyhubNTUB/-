@@ -489,13 +489,3 @@ response 回傳(失敗)：
      message:"失敗"
   }
 ~~~
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
-|First H | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
