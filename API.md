@@ -1,6 +1,7 @@
 
 | 目錄 |
 | --- |
+| [功能操作functionalOperation](#功能操作functionalOperation)
 | [會員資料member](#會員資料member) |
 | [寶寶資料baby](#寶寶資料baby) |
 | [成長紀錄growingRecord](#成長紀錄growingRecord) |
@@ -11,7 +12,61 @@
 ======================================
 
 
+## 功能操作functionalOperation
+
+~~~java
+描述：登入
+路徑：/login
+方法：GET
+request 請求：
+  {
+    id:"帳號(信箱)",
+    password:"密碼",
+    code:"驗證碼"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"登入成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"登入失敗"
+  }
+~~~
+
+~~~java
+描述：登出
+路徑：/logout
+方法：GET
+request 請求：
+  {
+    id:"帳號(信箱)",
+    password:"密碼"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"登出成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"登出失敗(尚未登入)"
+  }
+~~~
+
+
+======================================
+
+
 ## 會員資料member
+
 ~~~java
 描述：新增會員資料
 路徑：/member/add
@@ -112,6 +167,7 @@ response 回傳(失敗)：
 
 
 ## 寶寶資料baby
+
 ~~~java
 描述：新增寶寶資料
 名稱：/baby/add
@@ -193,6 +249,7 @@ response 回傳(失敗)：
 
 
 ## 成長紀錄growingRecord
+
 ~~~java
 描述：新增成長紀錄
 路徑：/growingRecord/add
@@ -300,6 +357,7 @@ response 回傳(失敗)：
 
 
 ## 討論區文章forum
+
 ~~~java
 描述：新增文章
 路徑：/forum/add
@@ -412,6 +470,7 @@ response 回傳(失敗)：
 
 
 ## 討論區文章留言forumComment
+
 ~~~java
 描述：新增討論區留言
 路徑：/forumComment/add
@@ -468,6 +527,546 @@ request 請求：
   {
     serNo:"留言編號",
     content:"留言內容"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：
+路徑：
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
   }
 ===
 response 回傳(成功)：
