@@ -1,23 +1,12 @@
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
+
+| 目錄 |
+| --- |
+| [會員資料member](#會員資料member) |
+| [寶寶資料baby](#寶寶資料baby) |
+| [成長紀錄growingRecord](#成長紀錄growingRecord) |
+| [討論區文章留言forum](#討論區文章留言forum) |
+| [討論區文章留言forum](#討論區文章留言forum) |
+
 ## 會員資料member
 ~~~java
 描述：新增會員資料
