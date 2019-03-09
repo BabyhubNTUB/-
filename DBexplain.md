@@ -55,7 +55,7 @@
 | 1 | forumNo | 文章流水號 | P |  | int | 50 | AI |
 | 2 | typeNo | 文章類別編號 | F |  | int | 50 | T15 |
 | 3 | id | 會員帳號 | F |  | char | 50 | T01 |
-| 4 | forumname | 文章名稱 |  |  | varchar | 50 |  |
+| 4 | forumName | 文章名稱 |  |  | varchar | 50 |  |
 | 5 | forumDateTime | 發文日期時間 |  |  | datetime |  |  |
 | 6 | content | 文章內容 |  |  | text |  | rich editor |
 
@@ -63,7 +63,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
-| 2 | forumNo | 文章流水號 | F |  | int | 50 | T04 |
+| 2 | forumNo | 文章編號 | F |  | int | 50 | T04 |
 | 3 | id | 會員帳號 | F |  | char | 50 | T01 |
 | 4 | comDateTime | 留言日期時間 |  |  | detetime |  |  |
 | 5 | content | 留言內容 |  |  | text |  |  |
@@ -82,8 +82,8 @@
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
 | 2 | babyNo | 寶寶編號 | F |  | int | 50 | T02 |
-| 3 | vacNo | 疫苗流水號 | F |  | int | 50 | T13 |
-| 4 | hospitalNo | 接踵醫院 | F | v | int | 50 | T16 |
+| 3 | vacNo | 疫苗編號 | F |  | int | 50 | T13 |
+| 4 | hospitalNo | 接種醫院 | F | v | int | 50 | T16 |
 | 5 | vaccination | 是否接種 |  |  | enum |  | '已接種','未接種' |
 | 6 | vacDate | 接種日期 |  | v | date |  |  |
 
@@ -101,7 +101,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
-| 2 | babyNo | 寶寶流水號 | F |  | int | 50 | T02 |
+| 2 | babyNo | 寶寶編號 | F |  | int | 50 | T02 |
 | 3 | msNo | 里程碑編號 | F |  | int | 50 | T14 |
 | 4 | reach | 是否達成 |  |  | enum |  | '達成','未達成' |
 | 5 | reachDate | 達成日期 |  | v | date |  |  |
@@ -133,7 +133,7 @@
 ## T13vaccine
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
-| 1 | vacNo | 疫苗流水號 | P |  | int | 50 | AI |
+| 1 | vacNo | 疫苗編號 | P |  | int | 50 | AI |
 | 2 | managerNo | 管理者帳號 | F |  | char | 20 | T12 |
 | 3 | varname | 疫苗名稱 |  |  | varchar | 50 |  |
 | 4 | varAge | 適合接種年齡 |  |  | int | 10 | 出生後幾天 |
@@ -142,7 +142,7 @@
 ## T14milestone
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
-| 1 | msNo | 里程碑流水號 | P |  | int | 50 | AI |
+| 1 | msNo | 里程碑編號 | P |  | int | 50 | AI |
 | 2 | managerNo | 管理者帳號 | F |  | char | 20 | T12 |
 | 3 | name |  | 里程碑名稱 |  | varchar | 20 |  |
 | 4 | content |  | 內容 |  | text |  |  |
