@@ -1,6 +1,6 @@
 | 目錄 |
 | --- |
-| [T01member(會員資料)](#T01member(會員資料)) |
+| [T01member會員資料](#T01member會員資料) |
 | [T02 baby(寶寶資料)](#T02寶寶資料baby) |
 | [T03 growingRecord(寶寶成長紀錄)](#T03寶寶成長紀錄growingRecord) |
 | [T04 forum(討論區文章)](#T04討論區文章forum) |
@@ -17,7 +17,7 @@
 | [T15 forumType(文章類別)](#T15forumType(文章類別)) |
 | [T16 hospital(醫院)](#T16hospital(醫院)) |
 
-## T01member(會員資料)
+## T01member會員資料
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | id | 會員帳號 | P |  | char | 50 | mail |
