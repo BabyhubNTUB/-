@@ -2,7 +2,7 @@
 | --- |
 | [T01member會員資料](#T01member會員資料) |
 | [T02 baby(寶寶資料)](#T02baby(寶寶資料)) |
-| [T03growingRecord(寶寶成長紀錄)](#T03growingRecord(寶寶成長紀錄)) |
+| [T03growingRecord(寶寶成長紀錄)](#T03growingRecord寶寶成長紀錄) |
 | [T04 forum(討論區文章)](#T04討論區文章forum) |
 | [T05 forumComment(討論區文章留言)](#T05forumComment(討論區文章留言)) |
 | [T06 pregnancyKnowledge(孕期知識)](#T06pregnancyKnowledge(孕期知識)) |
@@ -39,7 +39,7 @@
 | 5 | gender | 性別 |  |  | enum |  | '男','女' |
 | 6 | photo | 大頭貼 |  | v | varchar | 500 |  |
 
-## T03growingRecord(寶寶成長紀錄)
+## T03growingRecord寶寶成長紀錄
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
