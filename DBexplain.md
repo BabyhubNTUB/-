@@ -115,7 +115,7 @@
 | 4 | content | 內容 |  |  | text |  |  |
 | 5 | source | 出處 |  | v | varchar | 255 |  |
 
-## T11forumLike
+## T11forum_Like
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
