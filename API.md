@@ -7,7 +7,17 @@
 | [成長紀錄growingRecord](#成長紀錄growingRecord) |
 | [討論區文章forum](#討論區文章forum) |
 | [討論區文章留言forumComment](#討論區文章留言forumComment) |
-
+| [孕期知識pregnancyKnowledge](#孕期知識pregnancyKnowledge) |
+| [寶寶疫苗接種清單vaccination](#寶寶疫苗接種清單vaccination) |
+| [日記diary](#日記diary) |
+| [寶寶里程碑milestone_Done](#寶寶里程碑milestone_Done) |
+| [小孩教育education](#小孩教育education) |
+| [文章喜歡forumLike](#文章喜歡forumLike) |
+| [管理員帳號manager](#管理員帳號manager) |
+| [疫苗清單vaccine](#疫苗清單vaccine) |
+| [里程碑milestone](#里程碑milestone) |
+| [文章類別forum_Type](#文章類別forum_Type) |
+| [醫院資訊hospital](#醫院資訊hospital) |
 
 ======================================
 
@@ -1382,7 +1392,7 @@ response 回傳(失敗)：
 ======================================
 
 
-## 
+## 里程碑milestone
 
 ~~~java
 描述：新增里程碑
@@ -1478,6 +1488,106 @@ response 回傳(成功)：
     name:"里程碑名稱",
     content:"內容",
     mVideo:"影音檔"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 文章類別forum_Type
+
+~~~java
+描述：新增文章類別
+路徑：/forum_Type/add
+方法：POST
+request 請求：
+  {
+    typeNo:"文章類別編號",
+    managerNo:"管理者帳號",
+    name:"名稱"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：刪除文章類別
+路徑：/forum_Type/del
+方法：DELETE
+request 請求：
+  {
+    typeNo:"文章類別編號",
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：更改文章類別
+路徑：/forum_Type/update
+方法：PUT
+request 請求：
+  {
+    typeNo:"文章類別編號",
+    managerNo:"管理者帳號",
+    name:"名稱"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：查詢文章類別
+路徑：/forum_Type/query
+方法：GET
+request 請求：
+  {
+    typeNo:"文章類別編號",
+    managerNo:"管理者帳號",
+    name:"名稱"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
   }
 ===
 response 回傳(失敗)：
