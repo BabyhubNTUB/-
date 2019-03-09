@@ -61,6 +61,28 @@ response 回傳(失敗)：
   }
 ~~~
 
+~~~java
+描述：更改密碼
+路徑：/forgotPassword
+方法：GET
+request 請求：
+  {
+    id:"帳號(信箱)"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"已寄出更改密碼信件至您的郵件"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"無此帳號"
+  }
+~~~
+
 
 ======================================
 
@@ -431,13 +453,6 @@ response 回傳(失敗)：
      message:"失敗"
   }
 ~~~
-~~~
-名稱：
-方法：put
-input
-return
-ture|false
-~~~
 
 ~~~java
 描述：查詢文章
@@ -546,14 +561,19 @@ response 回傳(失敗)：
 ======================================
 
 
-## 
+## 孕期知識pregnancyKnowledge
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：新增孕期知識
+路徑：/pregnancyKnowledge/add
+方法：POST
 request 請求：
   {
+    serNo:"孕期知識編號",
+    managerNo:"管理者帳號",
+    title:"標題",
+    content:"內容",
+    source:"出處"
   }
 ===
 response 回傳(成功)：
@@ -570,11 +590,12 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：刪除孕期知識
+路徑：/pregnancyKnowledge/del
+方法：DELETE
 request 請求：
   {
+    serNo:"孕期知識編號",
   }
 ===
 response 回傳(成功)：
@@ -591,11 +612,16 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：更改孕期知識
+路徑：/pregnancyKnowledge/update
+方法：PUT
 request 請求：
   {
+    serNo:"孕期知識編號",
+    managerNo:"管理者帳號",
+    title:"標題",
+    content:"內容",
+    source:"出處"
   }
 ===
 response 回傳(成功)：
@@ -612,17 +638,737 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
+描述：查詢孕期知識
+路徑：/pregnancyKnowledge/query
+方法：GET
+request 請求：
+  {
+    serNo:"孕期知識編號",
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    serNo:"孕期知識編號",
+    managerNo:"管理者帳號",
+    title:"標題",
+    content:"內容",
+    source:"出處"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 寶寶疫苗接種清單vaccination
+
+~~~java
+描述：新增接種資料
+路徑：/vaccination/add
 方法：POST,DELETE,PUT,GET
 request 請求：
   {
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    vacNo:"疫苗流水號",
+    hospitalNo:"接種醫院",
+    vaccination:"是否接種",
+    vacDate:"接種日期"
   }
 ===
 response 回傳(成功)：
   {
     code:"0"
     message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：刪除接種資料
+路徑：/vaccination/del
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+    serNo:"流水號"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：更改接種資料
+路徑：/vaccination/update
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    vacNo:"疫苗流水號",
+    hospitalNo:"接種醫院",
+    vaccination:"是否接種",
+    vacDate:"接種日期"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：查詢接種資料
+路徑：/vaccination/query
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+    babyNo:"寶寶編號"
+    ||    
+    babyNo:"寶寶編號",
+    vacName:"疫苗名稱"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    vacNo:"疫苗流水號",
+    hospitalNo:"接種醫院",
+    vaccination:"是否接種",
+    vacDate:"接種日期"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 日記diary
+
+~~~java
+描述：新增日記
+路徑：/diary/add
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    id:"會員帳號",
+    diaryDate:"紀錄日期",
+    diary:"內容",
+    dVideo:"影音檔"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：刪除日記
+路徑：/diary/del
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+    serNo:"流水號" 
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：更改日記
+路徑：/diary/update
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    id:"會員帳號",
+    diaryDate:"紀錄日期",
+    diary:"內容",
+    dVideo:"影音檔"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：查詢日記
+路徑：/diary/query
+方法：POST,DELETE,PUT,GET
+request 請求：
+  {
+    serNo:"流水號" ||
+    babyNo:"寶寶編號" ||
+    id:"會員帳號" ||
+    diaryDate:"紀錄日期" ||
+    diary:"內容"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    id:"會員帳號",
+    diaryDate:"紀錄日期",
+    diary:"內容",
+    dVideo:"影音檔"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 寶寶里程碑milestone_Done
+
+~~~java
+描述：新增寶寶里程碑
+路徑：/babyMilestone/add
+方法：POST
+request 請求：
+  {
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    msNo:"里程碑編號",
+    reach:"是否達成",
+    reachDate:"達成日期",
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：刪除寶寶里程碑
+路徑：/babyMilestone/del
+方法：DELETE
+request 請求：
+  {
+    serNo:"流水號",
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：更改寶寶里程碑
+路徑：/babyMilestone/update
+方法：PUT
+request 請求：
+  {
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    msNo:"里程碑編號",
+    reach:"是否達成",
+    reachDate:"達成日期",
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：查詢寶寶里程碑
+路徑：/babyMilestone/query
+方法：GET
+request 請求：
+  {
+    serNo:"流水號" ||
+    babyNo:"寶寶編號" ||
+    msNo:"里程碑名字" ||
+    reach:"是否達成" ||
+    reachDate:"達成日期" ||
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    serNo:"流水號",
+    babyNo:"寶寶編號",
+    msNo:"里程碑編號",
+    reach:"是否達成",
+    reachDate:"達成日期",
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 小孩教育education
+
+~~~java
+描述：新增小孩教育
+路徑：/education/add
+方法：POST
+request 請求：
+  {
+    serNo:"流水號",
+    managerNo:"管理者編號",
+    title:"標題",
+    content:"內容",
+    source:"出處"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：刪除小孩教育
+路徑：/education/del
+方法：DELETE
+request 請求：
+  {
+    serNo:"流水號",
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：更改小孩教育
+路徑：/education/update
+方法：PUT
+request 請求：
+  {
+    serNo:"流水號",
+    managerNo:"管理者編號",
+    title:"標題",
+    content:"內容",
+    source:"出處"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：查詢小孩教育
+路徑：/education/query
+方法：GET
+request 請求：
+  {
+    serNo:"流水號" ||
+    managerNo:"管理者編號" ||
+    title:"標題" ||
+    content:"內容" ||
+    source:"出處"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    serNo:"流水號",
+    managerNo:"管理者編號",
+    title:"標題",
+    content:"內容",
+    source:"出處"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 文章喜歡forumLike
+
+~~~java
+描述：按下喜歡
+路徑：/forum/:forumNo/like
+方法：POST
+request 請求：
+  {
+    serNo:"流水號",
+    id:"會員帳號",
+    forumNo:"文章編號"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"喜歡這篇文章"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：收回喜歡
+路徑：/forum/:forumNo/dislike
+方法：DELETE
+request 請求：
+  {
+    serNo:"流水號",
+    id:"會員帳號",
+    forumNo:"文章編號"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"收回了你的喜歡"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 管理員帳號manager
+
+~~~java
+描述：新增管理員帳號
+路徑：/manager/add
+方法：POST
+request 請求：
+  {
+    managerNo:"管理員帳號",
+    password:"管理員密碼",
+    name:"名字",
+    cellphone:"手機"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：刪除管理員帳號
+路徑：/manager/del
+方法：DELETE
+request 請求：
+  {
+    managerNo:"管理員帳號",
+    password:"管理員密碼",
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：更改管理員帳號
+路徑：/manager/update
+方法：PUT
+request 請求：
+  {
+    managerNo:"管理員帳號",
+    password:"管理員密碼",
+    name:"名字",
+    cellphone:"手機"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：查詢管理員帳號
+路徑：/manager/query
+方法：GET
+request 請求：
+  {
+    managerNo:"管理員帳號",
+    name:"名字",
+    cellphone:"手機"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    managerNo:"管理員帳號",
+    password:"管理員密碼",
+    name:"名字",
+    cellphone:"手機"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+
+======================================
+
+
+## 疫苗清單vaccine
+
+~~~java
+描述：新增疫苗
+路徑：/vaccine/add
+方法：POST
+request 請求：
+  {
+    varNo:"疫苗編號",
+    managerNo:"管理者帳號",
+    varname:"疫苗名稱",
+    varAge:"適合接種年齡",
+    vacReaction:"接種後反應"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：刪除疫苗
+路徑：/vaccine/del
+方法：DELETE
+request 請求：
+  {
+    varNo:"疫苗編號"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：更改疫苗
+路徑：/vaccine/update
+方法：PUT
+request 請求：
+  {
+    varNo:"疫苗編號",
+    managerNo:"管理者帳號",
+    varname:"疫苗名稱",
+    varAge:"適合接種年齡",
+    vacReaction:"接種後反應"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"失敗"
+  }
+~~~
+
+~~~java
+描述：查詢疫苗
+路徑：/vaccine/query
+方法：GET
+request 請求：
+  {
+    varNo:"疫苗編號" ||
+    managerNo:"管理者帳號" ||
+    varname:"疫苗名稱" ||
+    varAge:"適合接種年齡" ||
+    vacReaction:"接種後反應"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    varNo:"疫苗編號",
+    managerNo:"管理者帳號",
+    varname:"疫苗名稱",
+    varAge:"適合接種年齡",
+    vacReaction:"接種後反應"
   }
 ===
 response 回傳(失敗)：
@@ -639,11 +1385,16 @@ response 回傳(失敗)：
 ## 
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：新增里程碑
+路徑：/milestone/add
+方法：POST
 request 請求：
   {
+    msNo:"里程碑編號",
+    managerNo:"管理者帳號",
+    name:"里程碑名稱",
+    content:"內容",
+    mVideo:"影音檔"
   }
 ===
 response 回傳(成功)：
@@ -660,11 +1411,12 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：刪除里程碑
+路徑：/milestone/del
+方法：DELETE
 request 請求：
   {
+    msNo:"里程碑編號",
   }
 ===
 response 回傳(成功)：
@@ -681,11 +1433,16 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：更改里程碑
+路徑：/milestone/update
+方法：PUT
 request 請求：
   {
+    msNo:"里程碑編號",
+    managerNo:"管理者帳號",
+    name:"里程碑名稱",
+    content:"內容",
+    mVideo:"影音檔"
   }
 ===
 response 回傳(成功)：
@@ -702,107 +1459,25 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：查詢里程碑
+路徑：/milestone/query
+方法：GET
 request 請求：
   {
+    msNo:"里程碑編號",
+    managerNo:"管理者帳號",
+    name:"里程碑名稱",
+    content:"內容"
   }
 ===
 response 回傳(成功)：
   {
     code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-
-======================================
-
-
-## 
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
+    msNo:"里程碑編號",
+    managerNo:"管理者帳號",
+    name:"里程碑名稱",
+    content:"內容",
+    mVideo:"影音檔"
   }
 ===
 response 回傳(失敗)：
@@ -816,14 +1491,20 @@ response 回傳(失敗)：
 ======================================
 
 
-## 
+## 醫院資訊hospital
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：新增醫院資訊
+路徑：/hospital/add
+方法：POST
 request 請求：
   {
+    hospitalNo:"醫院編號",
+    name:"醫院名稱",
+    longitude:"經度",
+    latitude:"緯度",
+    address:"地址",
+    phone:"聯絡電話";
   }
 ===
 response 回傳(成功)：
@@ -840,11 +1521,12 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：刪除醫院資訊
+路徑：/hospital/del
+方法：DELETE
 request 請求：
   {
+    hospitalNo:"醫院編號",
   }
 ===
 response 回傳(成功)：
@@ -861,11 +1543,17 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：更改醫院資訊
+路徑：/hospital/update
+方法：PUT
 request 請求：
   {
+    hospitalNo:"醫院編號",
+    name:"醫院名稱",
+    longitude:"經度",
+    latitude:"緯度",
+    address:"地址",
+    phone:"聯絡電話";
   }
 ===
 response 回傳(成功)：
@@ -882,191 +1570,17 @@ response 回傳(失敗)：
 ~~~
 
 ~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
+描述：查詢醫院資訊
+路徑：/hospital/query
+方法：GET
 request 請求：
   {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-
-======================================
-
-
-## 
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-
-======================================
-
-
-## 
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
-  }
-===
-response 回傳(成功)：
-  {
-    code:"0"
-    message:"成功"
-  }
-===
-response 回傳(失敗)：
-  { 
-     code:"-1"
-     message:"失敗"
-  }
-~~~
-
-~~~java
-描述：
-路徑：
-方法：POST,DELETE,PUT,GET
-request 請求：
-  {
+    hospitalNo:"醫院編號" ||
+    name:"醫院名稱" ||
+    longitude:"經度" ||
+    latitude:"緯度" ||
+    address:"地址" ||
+    phone:"聯絡電話"
   }
 ===
 response 回傳(成功)：
