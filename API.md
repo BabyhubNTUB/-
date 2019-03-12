@@ -93,6 +93,31 @@ response 回傳(失敗)：
   }
 ~~~
 
+~~~java
+描述：綁定LINE BOT
+路徑：/lineAdd
+方法：GET
+request 請求：
+  {
+    id:"帳號(信箱)",
+	lineId: "會員Line ID",
+    password:"密碼",
+    code:"驗證碼",
+	codeTime:"驗證碼有效時間"
+  }
+===
+response 回傳(成功)：
+  {
+    code:"0"
+    message:"綁定成功"
+  }
+===
+response 回傳(失敗)：
+  { 
+     code:"-1"
+     message:"綁定失敗"
+  }
+~~~
 
 ======================================
 
