@@ -144,9 +144,9 @@
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | msNo | 里程碑編號 | P |  | int | 50 | AI |
 | 2 | managerNo | 管理者帳號 | F |  | char | 20 | T12 |
-| 3 | name |  | 里程碑名稱 |  | varchar | 20 |  |
-| 4 | content |  | 內容 |  | text |  |  |
-| 5 | mVideo |  | 影音檔 | v | varchar | 500 |  |
+| 3 | name | 里程碑名稱 |  |  | varchar | 20 |  |
+| 4 | content | 內容 |  |  | text |  |  |
+| 5 | mVideo | 影音檔 |  | v | varchar | 500 |  |
 
 ## T15forum_Type
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
