@@ -394,11 +394,11 @@ request 請求：
 response 回傳(成功)：
   {
     code:"0"
-    serNo:"成長紀錄編號",
-    babyNo:"寶寶編號",
-    recordDateTime:"紀錄日期時間",
-    height:"身高",
-    weight:"體重",
+    serNo:"成長紀錄編號"|
+    babyNo:"寶寶編號"|
+    recordDateTime:"紀錄日期時間"|
+    height:"身高"|
+    weight:"體重"|
     drinkMilk:"喝奶量"
   }
 ===
