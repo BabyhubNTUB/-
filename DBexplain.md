@@ -24,7 +24,7 @@
 | 2 | displayName | 會員名稱或姓名 |  |  | char | 50 | 可用綽號 |
 | 3 | password | 會員密碼 |  |  | varchar | 20 | 加密 |
 | 4 | appellation | 稱謂 |  |  | varchar |  | '爸爸','媽媽'' |
-| 5 | lineId | 會員LineID |  |  | enum | 50 |  |
+| 5 | lineId | 會員LineID |  |  | varchar | 50 |  |
 | 6 | code | 驗證碼 |  | v | char | 6 |  |
 | 7 | codeTime | 驗證碼有效時間 |  | v | time |  |  |
 | 8 | photo | 大頭貼 |  | v | varchar | 500 |  |
@@ -36,7 +36,7 @@
 | 2 | id | 會員帳號 | F |  | char | 50 | T01 |
 | 3 | name | 寶寶名稱或姓名 |  |  | varchar | 50 | 可用綽號 |
 | 4 | birthday | 生日 |  |  | date |  |  |
-| 5 | gender | 性別 |  |  | enum |  | '男','女' |
+| 5 | gender | 性別 |  |  | char |  | '男','女' |
 | 6 | photo | 大頭貼 |  | v | varchar | 500 |  |
 
 ## T03growing_Record
@@ -44,7 +44,7 @@
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
 | 2 | babyNo | 寶寶編號 | F |  | int | 50 | T02 |
-| 3 | recordDateTime | 紀錄日期時間 |  |  | datetime |  |  |
+| 3 | recordDateTime | 紀錄日期時間 |  |  | time |  |  |
 | 4 | height | 身長 |  | v | float | 6 | 50.34cm |
 | 5 | weight | 體重 |  | v | float | 5 | 7.05kg |
 | 6 | drinkMilk | 喝奶量 |  |  | int | 10 | c.c. |
@@ -56,7 +56,7 @@
 | 2 | typeNo | 文章類別編號 | F |  | int | 50 | T15 |
 | 3 | id | 會員帳號 | F |  | char | 50 | T01 |
 | 4 | forumName | 文章名稱 |  |  | varchar | 50 |  |
-| 5 | forumDateTime | 發文日期時間 |  |  | datetime |  |  |
+| 5 | forumDateTime | 發文日期時間 |  |  | time |  |  |
 | 6 | content | 文章內容 |  |  | text |  | rich editor |
 
 ## T05forum_Comment
@@ -65,7 +65,7 @@
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
 | 2 | forumNo | 文章編號 | F |  | int | 50 | T04 |
 | 3 | id | 會員帳號 | F |  | char | 50 | T01 |
-| 4 | comDateTime | 留言日期時間 |  |  | detetime |  |  |
+| 4 | comDateTime | 留言日期時間 |  |  | time |  |  |
 | 5 | content | 留言內容 |  |  | text |  |  |
 
 ## T06pregnancy_Knowledge
@@ -84,7 +84,7 @@
 | 2 | babyNo | 寶寶編號 | F |  | int | 50 | T02 |
 | 3 | vacNo | 疫苗編號 | F |  | int | 50 | T13 |
 | 4 | hospitalNo | 接種醫院 | F | v | int | 50 | T16 |
-| 5 | vaccination | 是否接種 |  |  | enum |  | '已接種','未接種' |
+| 5 | vaccination | 是否接種 |  |  | char |  | '已接種','未接種' |
 | 6 | vacDate | 接種日期 |  | v | date |  |  |
 
 ## T08diary
@@ -103,7 +103,7 @@
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
 | 2 | babyNo | 寶寶編號 | F |  | int | 50 | T02 |
 | 3 | msNo | 里程碑編號 | F |  | int | 50 | T14 |
-| 4 | reach | 是否達成 |  |  | enum |  | '達成','未達成' |
+| 4 | reach | 是否達成 |  |  | char |  | '達成','未達成' |
 | 5 | reachDate | 達成日期 |  | v | date |  |  |
 
 ## T10education
