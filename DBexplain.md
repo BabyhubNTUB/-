@@ -20,8 +20,8 @@
 ## T01member
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
-| 1 | id | 會員帳號 | P |  | char | 50 | mail |
-| 2 | displayName | 會員名稱或姓名 |  |  | char | 50 | 可用綽號 |
+| 1 | id | 會員帳號 | P |  | varchar | 50 | mail |
+| 2 | displayName | 會員名稱或姓名 |  |  | varchar | 50 | 可用綽號 |
 | 3 | password | 會員密碼 |  |  | varchar | 20 | 加密 |
 | 4 | appellation | 稱謂 |  |  | varchar |  | '爸爸','媽媽'' |
 | 5 | lineId | 會員LineID |  |  | varchar | 50 |  |
@@ -33,7 +33,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | babyNo | 寶寶編號 | P |  | int | 50 | AI |
-| 2 | id | 會員帳號 | F |  | char | 50 | T01 |
+| 2 | id | 會員帳號 | F |  | varchar | 50 | T01 |
 | 3 | name | 寶寶名稱或姓名 |  |  | varchar | 50 | 可用綽號 |
 | 4 | birthday | 生日 |  |  | date |  |  |
 | 5 | gender | 性別 |  |  | char |  | '男','女' |
@@ -54,7 +54,7 @@
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | forumNo | 文章流水號 | P |  | int | 50 | AI |
 | 2 | typeNo | 文章類別編號 | F |  | int | 50 | T15 |
-| 3 | id | 會員帳號 | F |  | char | 50 | T01 |
+| 3 | id | 會員帳號 | F |  | varchar | 50 | T01 |
 | 4 | forumName | 文章名稱 |  |  | varchar | 50 |  |
 | 5 | forumDateTime | 發文日期時間 |  |  | time |  |  |
 | 6 | content | 文章內容 |  |  | text |  | rich editor |
@@ -64,7 +64,7 @@
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
 | 2 | forumNo | 文章編號 | F |  | int | 50 | T04 |
-| 3 | id | 會員帳號 | F |  | char | 50 | T01 |
+| 3 | id | 會員帳號 | F |  | varchar | 50 | T01 |
 | 4 | comDateTime | 留言日期時間 |  |  | time |  |  |
 | 5 | content | 留言內容 |  |  | text |  |  |
 
@@ -72,7 +72,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
-| 2 | managerNo | 管理者帳號 | F |  | char | 20 | T12 |
+| 2 | managerNo | 管理者帳號 | F |  | varchar | 20 | T12 |
 | 3 | title | 標題 |  |  | vachar | 20 |  |
 | 4 | content | 內容 |  |  | text |  |  |
 | 5 | source | 出處 |  | v | varchar | 255 |  |
@@ -92,7 +92,7 @@
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
 | 2 | babyNo | 寶寶編號 | F |  | int | 50 | T02 |
-| 3 | id | 會員帳號 | F |  | char | 10 | T01 |
+| 3 | id | 會員帳號 | F |  | varchar | 10 | T01 |
 | 4 | diaryDate | 日期 |  |  | date |  |  |
 | 5 | diary | 內容 |  |  | text |  | rich editor |
 | 6 | dVideo | 影音檔 |  | v | vachar | 500 |  |
@@ -110,7 +110,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
-| 2 | managerNo | 管理者編號 | F |  | char | 20 | T12 |
+| 2 | managerNo | 管理者編號 | F |  | varchar | 20 | T12 |
 | 3 | title | 標題 |  |  | vachar | 20 |  |
 | 4 | content | 內容 |  |  | text |  |  |
 | 5 | source | 出處 |  | v | varchar | 255 |  |
@@ -119,13 +119,13 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | serNo | 流水號 | P |  | int | 50 | AI |
-| 2 | id | 會員帳號 | F |  | char | 50 | T01 |
+| 2 | id | 會員帳號 | F |  | varchar | 50 | T01 |
 | 3 | forumNo | 文章流水號 | F |  | int | 50 | T04 |
 
 ## T12manager
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
-| 1 | managerNo | 帳號 | P |  | char | 20 |  |
+| 1 | managerNo | 帳號 | P |  | varchar | 20 |  |
 | 2 | password | 密碼 |  |  | varchar | 20 | 加密 |
 | 3 | name | 姓名 |  |  | char | 10 |  |
 | 4 | cellphone | 手機 |  |  | char | 10 |  |
@@ -134,7 +134,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | vacNo | 疫苗編號 | P |  | int | 50 | AI |
-| 2 | managerNo | 管理者帳號 | F |  | char | 20 | T12 |
+| 2 | managerNo | 管理者帳號 | F |  | varchar | 20 | T12 |
 | 3 | varname | 疫苗名稱 |  |  | varchar | 50 |  |
 | 4 | varAge | 適合接種年齡 |  |  | int | 10 | 出生後幾天 |
 | 5 | vacReaction | 接種後反應 |  |  | text |  |  |
@@ -143,7 +143,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | msNo | 里程碑編號 | P |  | int | 50 | AI |
-| 2 | managerNo | 管理者帳號 | F |  | char | 20 | T12 |
+| 2 | managerNo | 管理者帳號 | F |  | varchar | 20 | T12 |
 | 3 | name | 里程碑名稱 |  |  | varchar | 20 |  |
 | 4 | content | 內容 |  |  | text |  |  |
 | 5 | mVideo | 影音檔 |  | v | varchar | 500 |  |
@@ -152,7 +152,7 @@
 | | 欄位名稱(英) | 欄位名稱(中) | P/F | NULL | 資料型態 | 長度 | 說明 |
 | ---  | ---  | --- | --- | --- | --- | --- | --- |
 | 1 | typeNo | 文章類別編號 | P |  | int | 50 | AI |
-| 2 | managerNo | 管理者帳號 | F |  | char | 20 | T12 |
+| 2 | managerNo | 管理者帳號 | F |  | varchar | 20 | T12 |
 | 3 | name | 名稱 |  |  | varchar | 20 |  |
 
 ## T16hospital
